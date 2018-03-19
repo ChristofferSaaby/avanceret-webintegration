@@ -11,6 +11,7 @@ document.addEventListener ("DOMContentLoaded", function (event) {
         "images/image_07.jpg"
         
     ]);
+    img.setAttribute('src', galleryObject.imageArray[i])
     
 });
 
@@ -18,7 +19,7 @@ let galleryObject;
 galleryObject = new OOPGallery ();
 let i = 0;
 let img = document.querySelector(".oopgallery-image")
-let imgAttribute = img.setAttribute('src', galleryObject.imageArray[i]);
+//let imgAttribute = img.setAttribute('src', galleryObject.imageArray[i]);
 let firstButton = document.querySelector(".oopgallery-control-first");
 let lastButton = document.querySelector(".oopgallery-control-last");
 let previousButton = document.querySelector(".oopgallery-control-previous");
@@ -28,10 +29,10 @@ let imagesCount = document.querySelector(".oopgallery-image-number");
 
 
 firstButton.addEventListener ("click", function (event) {
-   imgAttribute.gotoImageFirst(i = 0);
-    // i=0;
+   //imgAttribute.gotoImageFirst(i = 0);
+    i=0;
     
-    //     img.setAttribute('src', galleryObject.imageArray[i])
+        img.setAttribute('src', galleryObject.imageArray[i])
     });
 
 
@@ -40,7 +41,7 @@ firstButton.addEventListener ("click", function (event) {
         if(i < 0) {
             i=6;
         }
-        imgAttribute;
+        img.setAttribute('src', galleryObject.imageArray[i])
         console.log(`der er trykket ${i}`);
     });
 
@@ -50,7 +51,7 @@ firstButton.addEventListener ("click", function (event) {
         if(i > 6) {
             i=0;
         }
-        imgAttribute;
+        img.setAttribute('src', galleryObject.imageArray[i])
         console.log(`der er trykket ${i}`);
     }); 
 
@@ -58,7 +59,7 @@ firstButton.addEventListener ("click", function (event) {
     lastButton.addEventListener ("click", function (event) {
         i = 6;
         console.log(`der er trykket ${i}`);
-        imgAttribute;
+        img.setAttribute('src', galleryObject.imageArray[i])
     });
 
 //galleryObject.setWrap (false);
