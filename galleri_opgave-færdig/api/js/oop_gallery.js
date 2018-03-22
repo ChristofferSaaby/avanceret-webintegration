@@ -65,3 +65,16 @@ class Gallery {
 	console.log(`${this.pos} / ${this.images.length}`);
 	}
 }
+
+class image {
+	constructor(){
+		this.id = id
+		this.title = title
+		this.kategori = kategori
+		this.filnavn = filnavn
+		this.dato = dato
+		this.fotograf = fotograf
+	}
+		
+
+}
